@@ -13,16 +13,16 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           
-          {/* Brand Column */}
+          {/* Brand Column - CLEAN LOGO WITHOUT BORDER BOX */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#E5C383] via-[#C8A96E] to-[#A68547] p-[1.5px]">
-                <div className="w-full h-full bg-[#0D0D0D] rounded-[10px] flex items-center justify-center overflow-hidden p-1">
-                  <img src="/logo_valley_logo.png" alt="Logo Valley" className="w-full h-full object-contain" />
-                </div>
-              </div>
+              <img 
+                src="/logo_valley_logo.png" 
+                alt="Logo Valley Studio" 
+                className="h-10 w-auto object-contain" 
+              />
               <span className="text-xl font-bold tracking-tight text-white font-serif-heading">
-                LOGO <span className="text-[#C8A96E]">VALLEY</span>
+                Logo <span className="text-[#C8A96E]">Valley</span>
               </span>
             </Link>
             <p className="text-xs text-gray-400 leading-relaxed">
@@ -33,9 +33,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links (No uppercase) */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Quick Links
             </h4>
             <ul className="space-y-2.5 text-xs">
@@ -48,9 +48,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services (No uppercase) */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Our Services
             </h4>
             <ul className="space-y-2.5 text-xs">
@@ -63,9 +63,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Details */}
+          {/* Contact Details (No uppercase) */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">
+            <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Connect With Studio
             </h4>
             <ul className="space-y-3 text-xs">
@@ -94,7 +94,7 @@ const Footer = () => {
             <span className="hover:text-white cursor-pointer">Terms of Service</span>
             <button 
               onClick={scrollToTop}
-              className="p-2 rounded-lg bg-[#141414] border border-white/10 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-black transition-all cursor-pointer"
+              className="p-2 rounded-full bg-[#141414] border border-white/10 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-black transition-all cursor-pointer"
               title="Back to Top"
             >
               <ArrowUp className="w-4 h-4" />

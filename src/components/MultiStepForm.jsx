@@ -69,7 +69,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
           
           {/* Header */}
           <div className="text-center max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-3">
               <Sparkles className="w-3.5 h-3.5" /> Start Your Project Today
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white font-serif-heading">
@@ -156,7 +156,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
                   <div className="pt-4 flex justify-end">
                     <button
                       type="submit"
-                      className="px-8 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm uppercase tracking-wider hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
+                      className="px-8 py-3.5 rounded-full gold-gradient-bg text-black font-bold text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
                     >
                       <span>Continue to Step 2</span>
                       <ArrowRight className="w-4 h-4" />
@@ -174,7 +174,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
                     
                     {/* Full Name */}
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 uppercase mb-2">
+                      <label className="block text-xs font-semibold text-gray-300 mb-2">
                         Full Name *
                       </label>
                       <div className="relative">
@@ -192,7 +192,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
 
                     {/* WhatsApp / Phone */}
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 uppercase mb-2">
+                      <label className="block text-xs font-semibold text-gray-300 mb-2">
                         WhatsApp / Phone Number *
                       </label>
                       <div className="relative">
@@ -210,7 +210,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
 
                     {/* Email */}
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 uppercase mb-2">
+                      <label className="block text-xs font-semibold text-gray-300 mb-2">
                         Email Address *
                       </label>
                       <div className="relative">
@@ -228,7 +228,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
 
                     {/* Business Name */}
                     <div>
-                      <label className="block text-xs font-semibold text-gray-300 uppercase mb-2">
+                      <label className="block text-xs font-semibold text-gray-300 mb-2">
                         Business / Brand Name
                       </label>
                       <div className="relative">
@@ -247,7 +247,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
 
                   {/* Notes / Details */}
                   <div>
-                    <label className="block text-xs font-semibold text-gray-300 uppercase mb-2">
+                    <label className="block text-xs font-semibold text-gray-300 mb-2">
                       Brief Requirements / Design Ideas
                     </label>
                     <div className="relative">
@@ -267,7 +267,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
                     <button
                       type="button"
                       onClick={() => setStep(1)}
-                      className="px-6 py-3 rounded-xl bg-[#0D0D0D] text-gray-300 hover:text-white border border-white/10 font-semibold text-xs uppercase tracking-wider flex items-center gap-2 cursor-pointer"
+                      className="px-6 py-3 rounded-full bg-[#0D0D0D] text-gray-300 hover:text-white border border-white/10 font-semibold text-xs tracking-wide flex items-center gap-2 cursor-pointer"
                     >
                       <ArrowLeft className="w-4 h-4" />
                       <span>Back</span>
@@ -275,9 +275,9 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
 
                     <button
                       type="submit"
-                      className="px-8 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm uppercase tracking-wider hover:scale-105 transition-all flex items-center gap-2 cursor-pointer shadow-lg shadow-[#C8A96E]/20"
+                      className="px-8 py-3.5 rounded-full gold-gradient-bg text-black font-bold text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2 cursor-pointer shadow-lg shadow-[#C8A96E]/20"
                     >
-                      <span>SUBMIT INQUIRY</span>
+                      <span>Submit Inquiry</span>
                       <Send className="w-4 h-4" />
                     </button>
                   </div>
@@ -308,7 +308,7 @@ const MultiStepForm = ({ selectedPackage, onClose }) => {
                     setSubmitted(false);
                     setStep(1);
                   }}
-                  className="px-6 py-2.5 rounded-lg bg-[#0D0D0D] text-[#C8A96E] border border-[#C8A96E]/30 hover:bg-[#C8A96E] hover:text-black font-semibold text-xs uppercase tracking-wider transition-all"
+                  className="px-6 py-2.5 rounded-full bg-[#0D0D0D] text-[#C8A96E] border border-[#C8A96E]/30 hover:bg-[#C8A96E] hover:text-black font-semibold text-xs tracking-wide transition-all"
                 >
                   Submit Another Project Brief
                 </button>

@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { portfolioItems } from '../data/portfolioData';
 import Navbar from '../components/Navbar';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
-import { ArrowLeft, CheckCircle, Calendar, User, Tag, Sparkles, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Calendar, User, Tag, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
 
   const item = portfolioItems.find((p) => p.id === id) || portfolioItems[0];
   const [activeImage, setActiveImage] = useState(item.coverImage);
@@ -24,7 +23,7 @@ const PortfolioDetailPage = () => {
     return (
       <div className="min-h-screen bg-[#0D0D0D] text-white flex flex-col items-center justify-center p-4">
         <h2 className="text-2xl font-bold text-white mb-4 font-serif-heading">Case Study Not Found</h2>
-        <Link to="/portfolios" className="px-6 py-3 gold-gradient-bg text-black font-bold rounded-xl text-sm">
+        <Link to="/portfolios" className="px-6 py-3 gold-gradient-bg text-black font-bold rounded-full text-sm">
           Return to Portfolio Gallery
         </Link>
       </div>
@@ -46,14 +45,14 @@ const PortfolioDetailPage = () => {
           
           <Link
             to="/portfolios"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#C8A96E] hover:underline uppercase tracking-wider mb-6"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#C8A96E] hover:underline tracking-wide mb-6"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Portfolio Library
           </Link>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold tracking-wide mb-3">
                 <Tag className="w-3.5 h-3.5" /> {item.category} Case Study
               </div>
               <h1 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
@@ -63,7 +62,7 @@ const PortfolioDetailPage = () => {
 
             <button
               onClick={handleOpenForm}
-              className="px-6 py-3 rounded-xl gold-gradient-bg text-black font-bold text-xs sm:text-sm uppercase tracking-wider hover:scale-105 transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full gold-gradient-bg text-black font-bold text-xs sm:text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2"
             >
               <span>Get Similar Brand Design</span>
               <ArrowRight className="w-4 h-4" />
@@ -88,7 +87,7 @@ const PortfolioDetailPage = () => {
         {/* Thumbnail Selector Grid */}
         {item.images && item.images.length > 1 && (
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+            <h3 className="text-sm font-semibold text-gray-400 tracking-wide mb-4">
               Project Asset Gallery ({item.images.length} High-Res Views)
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-4">
@@ -117,21 +116,21 @@ const PortfolioDetailPage = () => {
             </h3>
 
             <div>
-              <span className="text-xs text-gray-400 uppercase tracking-wider block">Client Organization</span>
+              <span className="text-xs text-gray-400 tracking-wide block">Client Organization</span>
               <span className="text-base font-semibold text-white flex items-center gap-2 mt-1">
                 <User className="w-4 h-4 text-[#C8A96E]" /> {item.client}
               </span>
             </div>
 
             <div>
-              <span className="text-xs text-gray-400 uppercase tracking-wider block">Year Delivered</span>
+              <span className="text-xs text-gray-400 tracking-wide block">Year Delivered</span>
               <span className="text-base font-semibold text-white flex items-center gap-2 mt-1">
                 <Calendar className="w-4 h-4 text-[#C8A96E]" /> {item.year}
               </span>
             </div>
 
             <div>
-              <span className="text-xs text-gray-400 uppercase tracking-wider block">Scope Tag</span>
+              <span className="text-xs text-gray-400 tracking-wide block">Scope Tag</span>
               <span className="inline-block px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold mt-1">
                 {item.tag}
               </span>
@@ -140,7 +139,7 @@ const PortfolioDetailPage = () => {
             {/* Brand Color Swatches */}
             {item.colorPalette && (
               <div>
-                <span className="text-xs text-gray-400 uppercase tracking-wider block mb-2">Brand Palette Tokens</span>
+                <span className="text-xs text-gray-400 tracking-wide block mb-2">Brand Palette Tokens</span>
                 <div className="flex items-center gap-2">
                   {item.colorPalette.map((color, i) => (
                     <div key={i} className="flex flex-col items-center gap-1">
@@ -197,19 +196,19 @@ const PortfolioDetailPage = () => {
 
         </div>
 
-        {/* Next & Previous Project Navigation */}
+        {/* Navigation */}
         <div className="pt-12 border-t border-white/10 flex items-center justify-between flex-wrap gap-4">
           <Link
             to="/portfolios"
-            className="px-6 py-3 rounded-xl bg-[#141414] text-white border border-white/10 hover:border-[#C8A96E] font-semibold text-xs uppercase tracking-wider transition-all"
+            className="px-6 py-3 rounded-full bg-[#141414] text-white border border-white/10 hover:border-[#C8A96E] font-semibold text-xs tracking-wide transition-all"
           >
             ← View All Case Studies
           </Link>
           <button
             onClick={handleOpenForm}
-            className="px-8 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-xs uppercase tracking-wider hover:scale-105 transition-all flex items-center gap-2"
+            className="px-8 py-3.5 rounded-full gold-gradient-bg text-black font-bold text-xs tracking-wide hover:scale-105 transition-all flex items-center gap-2"
           >
-            <span>Start Your Brand Rebrand</span>
+            <span>Start Your Rebrand</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

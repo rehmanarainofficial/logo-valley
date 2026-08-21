@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Lightbulb, ShieldCheck, Award } from 'lucide-react';
+import { Target, Lightbulb, Award } from 'lucide-react';
 
 const About = () => {
   return (
@@ -10,7 +10,7 @@ const About = () => {
           
           {/* Left Text Column */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-4">
               About Logo Valley Studio
             </div>
             
@@ -50,24 +50,24 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Visual Image - Live Website About Us Image */}
+          {/* Right Visual Image - Using about_image.png from Teeraj */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden border border-[#C8A96E]/30 bg-[#141414] p-3 shadow-2xl shadow-[#C8A96E]/15">
+            <div className="relative rounded-2xl overflow-hidden bg-[#141414] shadow-2xl">
               <img 
-                src="/about_us_image.jpg" 
-                alt="Logo Valley Studio Leadership & Designers" 
-                className="w-full h-[450px] rounded-xl object-cover"
+                src="/about_image.png" 
+                alt="Logo Valley Studio Leadership & Creative Team" 
+                className="w-full h-auto rounded-2xl object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-40"></div>
               
               {/* Floating Highlight Card */}
               <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h5 className="font-bold text-sm text-[#C8A96E]">Senior Creative Leadership</h5>
-                    <p className="text-xs text-gray-300">Overseeing every vector concept and brand asset</p>
+                    <h5 className="font-bold text-sm text-[#C8A96E]">Creative Leadership</h5>
+                    <p className="text-xs text-gray-300">Handcrafting brand identities for global founders</p>
                   </div>
-                  <div className="flex items-center gap-1 text-[#C8A96E] bg-[#C8A96E]/20 px-2.5 py-1 rounded-full text-xs font-semibold">
+                  <div className="flex items-center gap-1 text-[#C8A96E] bg-[#C8A96E]/20 px-3 py-1 rounded-full text-xs font-semibold">
                     <Award className="w-4 h-4" /> 10+ Yrs Exp
                   </div>
                 </div>

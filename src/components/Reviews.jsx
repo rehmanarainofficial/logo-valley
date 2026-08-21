@@ -9,7 +9,7 @@ const Reviews = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-4">
             <MessageSquare className="w-3.5 h-3.5" /> Client Feedback & Reviews
           </div>
           <h2 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">

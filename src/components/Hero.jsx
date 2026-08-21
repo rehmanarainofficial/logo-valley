@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Star, ShieldCheck, Zap, Award, Sparkles, CheckCircle } from 'lucide-react';
+import { ArrowRight, Award, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = ({ onOpenForm }) => {
@@ -15,7 +15,7 @@ const Hero = ({ onOpenForm }) => {
       <div className="absolute -top-10 -right-10 w-96 h-96 bg-[#C8A96E]/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-10 -left-10 w-96 h-96 bg-[#E5C383]/10 rounded-full blur-3xl pointer-events-none"></div>
       
-      {/* Delicate Grid Overlay */}
+      {/* Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f1f1f_1px,transparent_1px),linear-gradient(to_bottom,#1f1f1f_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] opacity-20 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -43,7 +43,7 @@ const Hero = ({ onOpenForm }) => {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
           <button
             onClick={onOpenForm || (() => scrollToSection('contact'))}
-            className="w-full sm:w-auto px-8 py-4 rounded-xl gold-gradient-bg text-black font-bold text-base tracking-wide uppercase hover:shadow-xl hover:shadow-[#C8A96E]/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
+            className="w-full sm:w-auto px-8 py-4 rounded-full gold-gradient-bg text-black font-bold text-base tracking-wide hover:shadow-xl hover:shadow-[#C8A96E]/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
           >
             <span>Request Free Logo Concept</span>
             <ArrowRight className="w-5 h-5" />
@@ -51,7 +51,7 @@ const Hero = ({ onOpenForm }) => {
 
           <Link
             to="/portfolios"
-            className="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#141414] text-white font-semibold text-base border border-[#C8A96E]/30 hover:border-[#C8A96E] hover:bg-[#1A1A1A] transition-all duration-300 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] text-white font-semibold text-base border border-[#C8A96E]/30 hover:border-[#C8A96E] hover:bg-[#1A1A1A] transition-all duration-300 flex items-center justify-center gap-2"
           >
             <span>Explore Portfolio Gallery</span>
           </Link>
