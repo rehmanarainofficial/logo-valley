@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Award, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from './ScrollReveal';
 
 const Hero = ({ onOpenForm }) => {
   const scrollToSection = (id) => {
@@ -21,80 +22,101 @@ const Hero = ({ onOpenForm }) => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
         
         {/* Top Floating Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#141414] border border-[#C8A96E]/30 text-[#C8A96E] text-xs sm:text-sm font-medium mb-8 shadow-lg shadow-[#C8A96E]/5 animate-pulse-glow">
-          <Award className="w-4 h-4 text-[#C8A96E]" />
-          <span>#1 Premier Logo & Brand Identity Studio</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-[#C8A96E]"></span>
-          <span className="text-gray-300">100% Original Vector Guarantee</span>
-        </div>
+        <ScrollReveal animation="fade-up" delay={0}>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#141414] border border-[#C8A96E]/30 text-[#C8A96E] text-xs sm:text-sm font-medium mb-8 shadow-lg shadow-[#C8A96E]/5 animate-pulse-glow">
+            <Award className="w-4 h-4 text-[#C8A96E]" />
+            <span>#1 Premier Logo & Brand Identity Studio</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C8A96E]"></span>
+            <span className="text-gray-300">100% Original Vector Guarantee</span>
+          </div>
+        </ScrollReveal>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-serif-heading max-w-5xl mx-auto leading-[1.15]">
-          Transform Your Brand with <br className="hidden sm:inline" />
-          <span className="gold-gradient-text">Iconic Custom Logo Design</span>
-        </h1>
+        <ScrollReveal animation="fade-up" delay={150}>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white font-serif-heading max-w-5xl mx-auto leading-[1.15]">
+            Transform Your Brand with <br className="hidden sm:inline" />
+            <span className="gold-gradient-text">Iconic Custom Logo Design</span>
+          </h1>
+        </ScrollReveal>
 
         {/* Subtitle */}
-        <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed">
-          We craft distinctive, memorable logo marks and luxury brand identities that command attention, build consumer trust, and drive up to <span className="text-[#C8A96E] font-semibold">3.2x lead growth</span>.
-        </p>
+        <ScrollReveal animation="fade-up" delay={300}>
+          <p className="mt-6 text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-normal leading-relaxed">
+            We craft distinctive, memorable logo marks and luxury brand identities that command attention, build consumer trust, and drive up to <span className="text-[#C8A96E] font-semibold">3.2x lead growth</span>.
+          </p>
+        </ScrollReveal>
 
         {/* CTAs */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <button
-            onClick={onOpenForm || (() => scrollToSection('contact'))}
-            className="w-full sm:w-auto px-8 py-4 rounded-full gold-gradient-bg text-black font-bold text-base tracking-wide hover:shadow-xl hover:shadow-[#C8A96E]/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
-          >
-            <span>Request Free Logo Concept</span>
-            <ArrowRight className="w-5 h-5" />
-          </button>
+        <ScrollReveal animation="fade-up" delay={450}>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+            <button
+              onClick={onOpenForm || (() => scrollToSection('contact'))}
+              className="w-full sm:w-auto px-8 py-4 rounded-full gold-gradient-bg text-black font-bold text-base tracking-wide hover:shadow-xl hover:shadow-[#C8A96E]/20 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 cursor-pointer"
+            >
+              <span>Request Free Logo Concept</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
 
-          <Link
-            to="/portfolios"
-            className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] text-white font-semibold text-base border border-[#C8A96E]/30 hover:border-[#C8A96E] hover:bg-[#1A1A1A] transition-all duration-300 flex items-center justify-center gap-2"
-          >
-            <span>Explore Portfolio Gallery</span>
-          </Link>
-        </div>
+            <Link
+              to="/portfolios"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#141414] text-white font-semibold text-base border border-[#C8A96E]/30 hover:border-[#C8A96E] hover:bg-[#1A1A1A] transition-all duration-300 flex items-center justify-center gap-2"
+            >
+              <span>Explore Portfolio Gallery</span>
+            </Link>
+          </div>
+        </ScrollReveal>
 
         {/* Features Checklist Bar */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-gray-400">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
-            <span>48-Hour Express Concepts</span>
+        <ScrollReveal animation="fade-up" delay={550}>
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-gray-400">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
+              <span>48-Hour Express Concepts</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
+              <span>Unlimited Revisions</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
+              <span>Full Master Vector Files</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
+              <span>100% Copyright Transfer</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
-            <span>Unlimited Revisions</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
-            <span>Full Master Vector Files</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-[#C8A96E]" />
-            <span>100% Copyright Transfer</span>
-          </div>
-        </div>
+        </ScrollReveal>
 
         {/* Statistics Grid */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
-          <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
-            <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">500+</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Logos Designed</div>
-          </div>
-          <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
-            <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">98%</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Satisfaction Score</div>
-          </div>
-          <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
-            <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">15 Days</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">Avg Lead Boost</div>
-          </div>
-          <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
-            <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">24/7</div>
-            <div className="text-xs sm:text-sm text-gray-400 mt-1">VIP Studio Support</div>
-          </div>
+          <ScrollReveal animation="fade-up" delay={100}>
+            <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">500+</div>
+              <div className="text-xs sm:text-sm text-gray-400 mt-1">Logos Designed</div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={200}>
+            <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">98%</div>
+              <div className="text-xs sm:text-sm text-gray-400 mt-1">Satisfaction Score</div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={300}>
+            <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">15 Days</div>
+              <div className="text-xs sm:text-sm text-gray-400 mt-1">Avg Lead Boost</div>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={400}>
+            <div className="p-6 rounded-2xl bg-[#141414]/90 border border-white/5 hover:border-[#C8A96E]/30 transition-all duration-300">
+              <div className="text-3xl sm:text-4xl font-bold text-[#C8A96E] font-serif-heading">24/7</div>
+              <div className="text-xs sm:text-sm text-gray-400 mt-1">VIP Studio Support</div>
+            </div>
+          </ScrollReveal>
         </div>
 
       </div>

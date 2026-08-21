@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShieldCheck, RefreshCw, FileCode, Clock, UserCheck, Award, Check } from 'lucide-react';
+import { ShieldCheck, RefreshCw, FileCode, Clock, UserCheck, Award } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const benefits = [
   {
@@ -39,39 +40,40 @@ const WhyChooseUs = () => {
     <section className="py-24 bg-[#0D0D0D] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
-            Why Logo Valley
+        <ScrollReveal animation="fade-up">
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
+              Why Logo Valley
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
+              The Premier Choice for <span className="gold-gradient-text">Serious Businesses</span>
+            </h2>
+            <p className="mt-4 text-gray-300 text-base sm:text-lg">
+              We eliminate design uncertainty with transparent pricing, iron-clad guarantees, and agency-grade execution.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
-            The Premier Choice for <span className="gold-gradient-text">Serious Businesses</span>
-          </h2>
-          <p className="mt-4 text-gray-300 text-base sm:text-lg">
-            We eliminate design uncertainty with transparent pricing, iron-clad guarantees, and agency-grade execution.
-          </p>
-        </div>
+        </ScrollReveal>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((item, idx) => {
             const IconComponent = item.icon;
             return (
-              <div 
-                key={idx}
-                className="p-8 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#C8A96E]/40 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C8A96E]/5"
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#E5C383] to-[#A68547] p-[1px] mb-6 group-hover:scale-110 transition-transform">
-                  <div className="w-full h-full bg-[#0D0D0D] rounded-[11px] flex items-center justify-center text-[#C8A96E]">
-                    <IconComponent className="w-6 h-6" />
+              <ScrollReveal key={idx} animation="fade-up" delay={idx * 100}>
+                <div className="p-8 rounded-2xl bg-[#141414] border border-white/5 hover:border-[#C8A96E]/40 transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-[#C8A96E]/5 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#E5C383] to-[#A68547] p-[1px] mb-6 group-hover:scale-110 transition-transform">
+                    <div className="w-full h-full bg-[#0D0D0D] rounded-[11px] flex items-center justify-center text-[#C8A96E]">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
                   </div>
-                </div>
 
-                <h3 className="text-xl font-bold text-white group-hover:text-[#C8A96E] transition-colors font-serif-heading">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-sm text-gray-400 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+                  <h3 className="text-xl font-bold text-white group-hover:text-[#C8A96E] transition-colors font-serif-heading">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </ScrollReveal>
             );
           })}
         </div>
