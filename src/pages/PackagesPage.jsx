@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Packages from '../components/Packages';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { Tag, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqs = [
@@ -41,12 +42,16 @@ const PackagesPage = () => {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
+      <SEO 
+        title="Design Packages & Pricing"
+        description="Transparent pricing packages for custom logo design, full brand guidelines, and corporate identity systems at Logo Valley Studio."
+      />
       <Navbar onOpenQuoteModal={handleOpenForm} />
       
       {/* Header Banner */}
       <div className="pt-16 pb-12 bg-[#141414] border-b border-[#C8A96E]/15 text-center">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-4">
             <Tag className="w-3.5 h-3.5" /> Pricing Plans & Options
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold text-white font-serif-heading">
@@ -65,7 +70,7 @@ const PackagesPage = () => {
         <section className="py-20 bg-[#141414] border-t border-white/5">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold uppercase mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold tracking-wide mb-3">
                 <HelpCircle className="w-3.5 h-3.5" /> FAQs
               </div>
               <h2 className="text-3xl font-bold text-white font-serif-heading">
@@ -81,7 +86,7 @@ const PackagesPage = () => {
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    className="w-full p-5 text-left flex items-center justify-between font-semibold text-base text-white hover:text-[#C8A96E] transition-colors"
+                    className="w-full p-5 text-left flex items-center justify-between font-semibold text-base text-white hover:text-[#C8A96E] transition-colors cursor-pointer"
                   >
                     <span>{faq.q}</span>
                     {openFaq === i ? <ChevronUp className="w-5 h-5 text-[#C8A96E]" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}

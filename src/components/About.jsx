@@ -50,25 +50,25 @@ const About = () => {
             </div>
           </div>
 
-          {/* Right Visual Image - Using about_image.png from Teeraj */}
-          <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden bg-[#141414] shadow-2xl">
+          {/* Right Visual Image - FIXED HEIGHT (Screenshot 2 Fix) */}
+          <div className="relative flex justify-center">
+            <div className="relative rounded-2xl overflow-hidden bg-[#141414] shadow-2xl w-full max-w-lg max-h-[420px]">
               <img 
                 src="/about_image.png" 
-                alt="Logo Valley Studio Leadership & Creative Team" 
-                className="w-full h-auto rounded-2xl object-cover"
+                alt="Logo Valley Studio Creative Leadership" 
+                className="w-full h-[420px] rounded-2xl object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-transparent to-transparent opacity-40"></div>
               
               {/* Floating Highlight Card */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel text-white">
+              <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-xl glass-panel text-white">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h5 className="font-bold text-sm text-[#C8A96E]">Creative Leadership</h5>
-                    <p className="text-xs text-gray-300">Handcrafting brand identities for global founders</p>
+                    <h5 className="font-bold text-xs sm:text-sm text-[#C8A96E]">Creative Leadership</h5>
+                    <p className="text-[11px] text-gray-300">Handcrafting brand identities for global founders</p>
                   </div>
-                  <div className="flex items-center gap-1 text-[#C8A96E] bg-[#C8A96E]/20 px-3 py-1 rounded-full text-xs font-semibold">
-                    <Award className="w-4 h-4" /> 10+ Yrs Exp
+                  <div className="flex items-center gap-1 text-[#C8A96E] bg-[#C8A96E]/20 px-2.5 py-1 rounded-full text-[11px] font-semibold">
+                    <Award className="w-3.5 h-3.5" /> 10+ Yrs Exp
                   </div>
                 </div>
               </div>

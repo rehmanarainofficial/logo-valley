@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Portfolio from '../components/Portfolio';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { Sparkles } from 'lucide-react';
 
 const PortfolioPage = () => {
@@ -15,12 +16,16 @@ const PortfolioPage = () => {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
+      <SEO 
+        title="Portfolio Showcase"
+        description="Explore the complete logo design and brand identity portfolio of Logo Valley Studio featuring Teerag, 104 Digital, and Boostix Media."
+      />
       <Navbar onOpenQuoteModal={handleOpenForm} />
       
       {/* Header Banner */}
       <div className="pt-16 pb-12 bg-[#141414] border-b border-[#C8A96E]/15 text-center">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-4">
             <Sparkles className="w-3.5 h-3.5" /> Full Showcase Library
           </div>
           <h1 className="text-4xl sm:text-6xl font-bold text-white font-serif-heading">

@@ -10,6 +10,7 @@ import Packages from '../components/Packages';
 import Reviews from '../components/Reviews';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 
 const HomePage = () => {
   const [selectedPkg, setSelectedPkg] = useState(null);
@@ -27,6 +28,10 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
+      <SEO 
+        title="Logo Valley | Premium Logo Design & Brand Identity Studio"
+        description="Logo Valley is a premier logo design and branding studio helping businesses build iconic visual identities and accelerate qualified leads by 3.2x."
+      />
       <Navbar onOpenQuoteModal={handleOpenForm} />
       <main>
         <Hero onOpenForm={handleOpenForm} />

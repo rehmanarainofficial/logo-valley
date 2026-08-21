@@ -13,7 +13,7 @@ const Footer = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           
-          {/* Brand Column - CLEAN LOGO WITHOUT BORDER BOX */}
+          {/* Brand Column */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3">
               <img 
@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links (No uppercase) */}
+          {/* Quick Links */}
           <div>
             <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Quick Links
@@ -48,7 +48,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services (No uppercase) */}
+          {/* Services */}
           <div>
             <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Our Services
@@ -63,7 +63,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Details (No uppercase) */}
+          {/* Contact Details */}
           <div>
             <h4 className="text-sm font-bold text-white tracking-wide mb-4">
               Connect With Studio
@@ -86,12 +86,12 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Bar */}
+        {/* Bottom Bar with Privacy & Terms Links */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>© {new Date().getFullYear()} Logo Valley Studio. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="hover:text-white cursor-pointer">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer">Terms of Service</span>
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">Terms of Service</Link>
             <button 
               onClick={scrollToTop}
               className="p-2 rounded-full bg-[#141414] border border-white/10 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-black transition-all cursor-pointer"

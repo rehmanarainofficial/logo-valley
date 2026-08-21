@@ -4,6 +4,7 @@ import { portfolioItems } from '../data/portfolioData';
 import Navbar from '../components/Navbar';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
+import SEO from '../components/SEO';
 import { ArrowLeft, CheckCircle, Calendar, User, Tag, ArrowRight, ShieldCheck } from 'lucide-react';
 
 const PortfolioDetailPage = () => {
@@ -37,6 +38,10 @@ const PortfolioDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
+      <SEO 
+        title={`${item.title} Case Study`}
+        description={`Explore deliverables, brand strategy, and vector assets for ${item.title} designed by Logo Valley Studio.`}
+      />
       <Navbar onOpenQuoteModal={handleOpenForm} />
 
       {/* Case Study Header Banner */}
@@ -62,7 +67,7 @@ const PortfolioDetailPage = () => {
 
             <button
               onClick={handleOpenForm}
-              className="px-6 py-3 rounded-full gold-gradient-bg text-black font-bold text-xs sm:text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2"
+              className="px-6 py-3 rounded-full gold-gradient-bg text-black font-bold text-xs sm:text-sm tracking-wide hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
             >
               <span>Get Similar Brand Design</span>
               <ArrowRight className="w-4 h-4" />
@@ -206,7 +211,7 @@ const PortfolioDetailPage = () => {
           </Link>
           <button
             onClick={handleOpenForm}
-            className="px-8 py-3.5 rounded-full gold-gradient-bg text-black font-bold text-xs tracking-wide hover:scale-105 transition-all flex items-center gap-2"
+            className="px-8 py-3.5 rounded-full gold-gradient-bg text-black font-bold text-xs tracking-wide hover:scale-105 transition-all flex items-center gap-2 cursor-pointer"
           >
             <span>Start Your Rebrand</span>
             <ArrowRight className="w-4 h-4" />
