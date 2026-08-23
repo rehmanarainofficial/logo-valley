@@ -1,57 +1,74 @@
 export const reviewsData = [
   {
     id: 1,
-    clientName: "David Harrison",
-    company: "Founder, Teerag Apparel",
-    avatarInitial: "DH",
+    clientName: "Koncept Scaping Sunil Ganesh",
+    company: "Facebook Client",
+    avatarInitial: "KS",
     rating: 5,
-    project: "Logo & Brand Identity",
-    date: "August 2026",
+    recommendation: "recommends Logo Valley",
+    date: "5 days ago",
     verified: true,
-    review: "Logo Valley transformed our brand completely! The team delivered 8 distinct concepts within 36 hours. The gold foil packaging guidelines and custom typography gave Teerag an instant luxury appeal. Our sales increased 3x in the first month!"
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "Had a really great experience working with Siam from Logo Valley 🙌 Overall, super happy with the experience and the final result. Definitely recommend Siam and Logo Valley if you're looking for quality work and a solid, easygoing process."
   },
   {
     id: 2,
-    clientName: "Sophia Martinez",
-    company: "CEO, 104 Digital Solutions",
-    avatarInitial: "SM",
+    clientName: "Connor Maki",
+    company: "Facebook Client",
+    avatarInitial: "CM",
     rating: 5,
-    project: "Tech Logo & Stationery",
-    date: "August 2026",
+    recommendation: "recommends Logo Valley",
+    date: "Apr 7, 2025",
     verified: true,
-    review: "Outstanding creativity and professionalism! They captured our tech vision perfectly with a sharp geometric mark. The unlimited revisions feature gave us absolute peace of mind. Highly recommended!"
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "Absolutely amazing to work with! Super professional and quick with his work."
   },
   {
     id: 3,
-    clientName: "Marcus Vance",
-    company: "Marketing Director, Boostix",
-    avatarInitial: "MV",
+    clientName: "Joel Daw",
+    company: "Facebook Client",
+    avatarInitial: "JD",
     rating: 5,
-    project: "Full Branding & Web UI",
-    date: "July 2026",
+    recommendation: "recommends Logo Valley",
+    date: "Mar 7, 2025",
     verified: true,
-    review: "Working with Logo Valley was a game changer. Their speed, attention to color palettes, and responsive support made the whole rebranding seamless. We got vector master files ready for print and digital immediately."
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "Logo Valley did amazing work on my logo and flyer, I will continue to use their services!"
   },
   {
     id: 4,
-    clientName: "Elena Rostova",
-    company: "Co-Founder, Luxe Living",
-    avatarInitial: "ER",
+    clientName: "Amjad Hanna",
+    company: "Facebook Client",
+    avatarInitial: "AH",
     rating: 5,
-    project: "Logo Design Suite",
-    date: "July 2026",
+    recommendation: "recommends Logo Valley",
+    date: "Jan 27",
     verified: true,
-    review: "The design team is incredibly talented! The logo variations were so good we had a tough time choosing. The dedicated manager kept us updated every step of the way. 10/10 service!"
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "Great services, modern design, on time, cooperation and respect of clients. GO and work with Saim for your logo design and branding guidelines."
   },
   {
     id: 5,
-    clientName: "James O'Connor",
-    company: "Operations Lead, Apex Logistics",
-    avatarInitial: "JO",
+    clientName: "George Oliver",
+    company: "Facebook Client",
+    avatarInitial: "GO",
     rating: 5,
-    project: "Corporate Rebrand",
-    date: "June 2026",
+    recommendation: "recommends Logo Valley",
+    date: "Feb 17, 2024",
     verified: true,
-    review: "Fast 24-hour delivery, crisp vector files, and incredible value. Logo Valley is now our permanent branding agency for all our subsidiary brands."
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "awesome experience with logo valley .. hope so we will work again inshallah 👍"
+  },
+  {
+    id: 6,
+    clientName: "Mate Cleaning",
+    company: "Facebook Client",
+    avatarInitial: "MC",
+    rating: 5,
+    recommendation: "recommends Logo Valley",
+    date: "Sep 11, 2023",
+    verified: true,
+    facebookUrl: "https://www.facebook.com/logovalley1/reviews",
+    review: "Saim did an amazing job. I am fully satisfied and his designs are amazing."
   }
 ];

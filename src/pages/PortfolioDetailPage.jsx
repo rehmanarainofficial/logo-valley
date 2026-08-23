@@ -44,20 +44,21 @@ const PortfolioDetailPage = () => {
       />
       <Navbar onOpenQuoteModal={handleOpenForm} />
 
-      {/* Case Study Header Banner */}
-      <div className="py-12 bg-[#141414] border-b border-[#C8A96E]/15">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+      {/* Main Content & Gallery */}
+      <main className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        
+        {/* Top Navigation & Title Bar */}
+        <div>
           <Link
             to="/portfolios"
-            className="inline-flex items-center gap-2 text-xs font-semibold text-[#C8A96E] hover:underline tracking-wide mb-6"
+            className="inline-flex items-center gap-2 text-xs font-semibold text-[#C8A96E] hover:underline tracking-wide mb-4"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Portfolio Library
           </Link>
 
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold tracking-wide mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold tracking-wide mb-2">
                 <Tag className="w-3.5 h-3.5" /> {item.category} Case Study
               </div>
               <h1 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
@@ -73,13 +74,8 @@ const PortfolioDetailPage = () => {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-
         </div>
-      </div>
 
-      {/* Main Content & Gallery */}
-      <main className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        
         {/* Main Display Image */}
         <div className="rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-4 shadow-2xl overflow-hidden min-h-[400px] flex items-center justify-center">
           <img

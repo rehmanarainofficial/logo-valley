@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ArrowRight } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = ({ onOpenQuoteModal }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,7 @@ const Navbar = ({ onOpenQuoteModal }) => {
   const scrollToSection = (id) => {
     setMobileMenuOpen(false);
     if (location.pathname !== '/') {
-      window.location.href = `/#${id}`;
+      navigate(`/#${id}`);
       return;
     }
     const element = document.getElementById(id);
@@ -33,21 +34,6 @@ const Navbar = ({ onOpenQuoteModal }) => {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      {/* Top Announcement Bar */}
-      <div className="bg-gradient-to-r from-[#A68547] via-[#C8A96E] to-[#E5C383] text-black py-2 px-4 text-xs md:text-sm font-medium tracking-wide">
-        <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 text-center">
-          <Sparkles className="w-4 h-4 fill-black animate-pulse" />
-          <span>Our clients average a <strong>3.2x increase</strong> in qualified leads within 15 days of rebranding with us.</span>
-          <a 
-            href="#contact" 
-            onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }} 
-            className="hidden sm:inline-flex items-center underline font-bold hover:text-white transition-colors ml-2"
-          >
-            Claim Your Discount <ArrowRight className="w-3.5 h-3.5 ml-1" />
-          </a>
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <nav 
         className={`w-full transition-all duration-300 ${
@@ -58,128 +44,137 @@ const Navbar = ({ onOpenQuoteModal }) => {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
-          {/* Logo - CLEAN WITHOUT BORDER BOX */}
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img 
               src="/logo_valley_logo.png" 
               alt="Logo Valley Studio" 
               className="h-10 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-white font-serif-heading">
-                Logo <span className="text-[#C8A96E]">Valley</span>
-              </span>
-              <span className="text-[10px] tracking-widest text-gray-400 -mt-1 font-semibold">
-                Brand Design Studio
-              </span>
-            </div>
+            <span className="text-xl font-bold tracking-tight text-white font-serif-heading">
+              Logo <span className="text-[#C8A96E]">Valley</span>
+            </span>
           </Link>
 
-          {/* Desktop Nav Links (No uppercase) */}
-          <div className="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-8">
             <Link 
               to="/" 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors"
+              className={`text-sm font-semibold tracking-wide transition-colors ${
+                location.pathname === '/' ? 'text-[#C8A96E]' : 'text-gray-300 hover:text-[#C8A96E]'
+              }`}
             >
               Home
             </Link>
+            <button 
+              onClick={() => scrollToSection('about')}
+              className="text-sm font-semibold text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
+            >
+              About
+            </button>
             <Link 
               to="/portfolios" 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors"
+              className={`text-sm font-semibold tracking-wide transition-colors ${
+                location.pathname === '/portfolios' ? 'text-[#C8A96E]' : 'text-gray-300 hover:text-[#C8A96E]'
+              }`}
             >
               Portfolio
             </Link>
             <button 
-              onClick={() => scrollToSection('process')} 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
+              onClick={() => scrollToSection('process')}
+              className="text-sm font-semibold text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
             >
               Our Process
             </button>
             <Link 
               to="/packages" 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors"
+              className={`text-sm font-semibold tracking-wide transition-colors ${
+                location.pathname === '/packages' ? 'text-[#C8A96E]' : 'text-gray-300 hover:text-[#C8A96E]'
+              }`}
             >
               Packages
             </Link>
             <button 
-              onClick={() => scrollToSection('reviews')} 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
+              onClick={() => scrollToSection('reviews')}
+              className="text-sm font-semibold text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
             >
               Reviews
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
-              className="text-gray-300 hover:text-[#C8A96E] transition-colors cursor-pointer"
+          </div>
+
+          {/* Desktop Call to Action Button */}
+          <div className="hidden md:flex items-center gap-4">
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="px-6 py-2.5 rounded-full gold-gradient-bg text-black font-bold text-xs tracking-wide hover:shadow-lg hover:shadow-[#C8A96E]/20 hover:scale-105 transition-all duration-300 flex items-center gap-2 cursor-pointer"
             >
-              Contact
+              <span>Get Free Quote</span>
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
 
-          {/* Action CTA Button */}
-          <div className="flex items-center gap-4">
-            <button
-              onClick={onOpenQuoteModal || (() => scrollToSection('contact'))}
-              className="relative group overflow-hidden rounded-full p-[1px] font-semibold text-xs sm:text-sm tracking-wide cursor-pointer"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-[#E5C383] via-[#C8A96E] to-[#A68547] transition-all duration-300 group-hover:opacity-90"></span>
-              <span className="relative block px-5 sm:px-6 py-2 bg-[#0D0D0D] rounded-full text-[#C8A96E] group-hover:text-black group-hover:bg-[#C8A96E] transition-all duration-300">
-                Get Started
-              </span>
-            </button>
-
-            {/* Mobile Hamburger Toggle */}
+          {/* Mobile Hamburger Toggle Button */}
+          <div className="md:hidden flex items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden text-gray-300 hover:text-white p-2 rounded-lg bg-[#141414] border border-[#C8A96E]/20"
-              aria-label="Toggle Navigation"
+              className="p-2 rounded-lg text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Flyout Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-[#141414] border-b border-[#C8A96E]/20 px-6 py-6 space-y-4 animate-in slide-in-from-top duration-300">
+          <div className="md:hidden bg-[#0D0D0D] border-b border-[#C8A96E]/20 px-4 pt-3 pb-6 space-y-4 animate-in slide-in-from-top duration-200">
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-base font-medium text-gray-200 hover:text-[#C8A96E]"
+              className="block text-base font-semibold text-white hover:text-[#C8A96E] py-2"
             >
-              Home
+              Home Landing
             </Link>
+            <button
+              onClick={() => scrollToSection('about')}
+              className="block w-full text-left text-base font-semibold text-gray-300 hover:text-[#C8A96E] py-2"
+            >
+              About Studio
+            </button>
             <Link
               to="/portfolios"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-base font-medium text-gray-200 hover:text-[#C8A96E]"
+              className="block text-base font-semibold text-gray-300 hover:text-[#C8A96E] py-2"
             >
               Portfolio Gallery
             </Link>
             <button
               onClick={() => scrollToSection('process')}
-              className="block w-full text-left text-base font-medium text-gray-200 hover:text-[#C8A96E]"
+              className="block w-full text-left text-base font-semibold text-gray-300 hover:text-[#C8A96E] py-2"
             >
               Our Process
             </button>
             <Link
               to="/packages"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-base font-medium text-gray-200 hover:text-[#C8A96E]"
+              className="block text-base font-semibold text-gray-300 hover:text-[#C8A96E] py-2"
             >
-              Pricing & Packages
+              Design Packages
             </Link>
             <button
               onClick={() => scrollToSection('reviews')}
-              className="block w-full text-left text-base font-medium text-gray-200 hover:text-[#C8A96E]"
+              className="block w-full text-left text-base font-semibold text-gray-300 hover:text-[#C8A96E] py-2"
             >
-              Client Testimonials
+              Client Reviews
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left text-base font-medium text-gray-200 hover:text-[#C8A96E]"
-            >
-              Contact Us
-            </button>
+            <div className="pt-2">
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="w-full py-3 rounded-full gold-gradient-bg text-black font-bold text-sm tracking-wide text-center cursor-pointer"
+              >
+                Get Free Custom Quote
+              </button>
+            </div>
           </div>
         )}
       </nav>

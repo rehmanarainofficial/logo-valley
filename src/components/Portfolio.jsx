@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { portfolioItems } from '../data/portfolioData';
-import { Eye, Sparkles, ArrowRight } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
-import ScrollReveal from './ScrollReveal';
+import React, { useState } from "react";
+import { portfolioItems } from "../data/portfolioData";
+import { Eye, Sparkles, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import ScrollReveal from "./ScrollReveal";
 
 const categories = ["All", "Logo Design", "Branding", "Web Design"];
 
@@ -10,9 +10,10 @@ const Portfolio = ({ isStandalonePage = false }) => {
   const [activeCategory, setActiveCategory] = useState("All");
   const navigate = useNavigate();
 
-  const filteredItems = activeCategory === "All"
-    ? portfolioItems
-    : portfolioItems.filter(item => item.category === activeCategory);
+  const filteredItems =
+    activeCategory === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeCategory);
 
   const handleCardClick = (id) => {
     navigate(`/portfolio/${id}`);
@@ -21,7 +22,6 @@ const Portfolio = ({ isStandalonePage = false }) => {
   return (
     <section id="portfolio" className="py-24 bg-[#0D0D0D] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <ScrollReveal animation="fade-up">
           <div className="text-center max-w-3xl mx-auto">
@@ -29,10 +29,11 @@ const Portfolio = ({ isStandalonePage = false }) => {
               <Sparkles className="w-3.5 h-3.5" /> Our Featured Case Studies
             </div>
             <h2 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
-              Handcrafted <span className="gold-gradient-text">Brand Masterpieces</span>
+              Work <span className="gold-gradient-text">We're Proud Of</span>
             </h2>
             <p className="mt-4 text-gray-300 text-base sm:text-lg">
-              Explore our showcase of custom vector logos, complete brand guidelines, and high-converting identities crafted for industry leaders.
+              500+ logos and brand identities across every industry. A selection
+              of our recent work.
             </p>
           </div>
         </ScrollReveal>
@@ -46,8 +47,8 @@ const Portfolio = ({ isStandalonePage = false }) => {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
                   activeCategory === cat
-                    ? 'gold-gradient-bg text-black shadow-lg shadow-[#C8A96E]/20 scale-105'
-                    : 'bg-[#141414] text-gray-400 border border-white/10 hover:text-white hover:border-[#C8A96E]/40'
+                    ? "gold-gradient-bg text-black shadow-lg shadow-[#C8A96E]/20 scale-105"
+                    : "bg-[#141414] text-gray-400 border border-white/10 hover:text-white hover:border-[#C8A96E]/40"
                 }`}
               >
                 {cat}
@@ -71,7 +72,7 @@ const Portfolio = ({ isStandalonePage = false }) => {
                     alt={item.title}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  
+
                   {/* Overlay on Hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0D0D0D] via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="px-5 py-2.5 rounded-full bg-[#C8A96E] text-black font-bold text-xs uppercase tracking-wider flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -101,13 +102,12 @@ const Portfolio = ({ isStandalonePage = false }) => {
                       {item.description}
                     </p>
                   </div>
-                  
+
                   <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-semibold text-[#C8A96E]">
                     <span>View Case Study & Deliverables</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-
               </div>
             </ScrollReveal>
           ))}
@@ -127,7 +127,6 @@ const Portfolio = ({ isStandalonePage = false }) => {
             </div>
           </ScrollReveal>
         )}
-
       </div>
     </section>
   );

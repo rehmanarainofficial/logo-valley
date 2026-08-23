@@ -4,7 +4,7 @@ import Packages from '../components/Packages';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { Tag, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
+import { HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
 const faqs = [
   {
@@ -47,21 +47,6 @@ const PackagesPage = () => {
         description="Transparent pricing packages for custom logo design, full brand guidelines, and corporate identity systems at Logo Valley Studio."
       />
       <Navbar onOpenQuoteModal={handleOpenForm} />
-      
-      {/* Header Banner */}
-      <div className="pt-16 pb-12 bg-[#141414] border-b border-[#C8A96E]/15 text-center">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold tracking-wide mb-4">
-            <Tag className="w-3.5 h-3.5" /> Pricing Plans & Options
-          </div>
-          <h1 className="text-4xl sm:text-6xl font-bold text-white font-serif-heading">
-            Design Packages & <span className="gold-gradient-text">Transparent Pricing</span>
-          </h1>
-          <p className="mt-4 text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
-            Choose a package tailored to your business stage. Every plan includes full vector files, revisions, and ownership transfer.
-          </p>
-        </div>
-      </div>
 
       <main>
         <Packages onSelectPackage={handleSelectPackage} />

@@ -20,40 +20,39 @@ const clientLogos = [
 
 const ClientMarquee = () => {
   return (
-    <section className="w-full py-16 bg-[#F9F7F3] text-gray-900 border-y border-gray-200">
+    <section className="w-full py-16 bg-[#0D0D0D] text-white border-y border-[#C8A96E]/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Sub-badge */}
-        <span className="text-xs font-bold tracking-widest text-[#C8A96E] uppercase mb-3 block">
+        <span className="inline-block text-xs font-bold tracking-widest text-[#C8A96E] uppercase mb-3 px-3 py-1 rounded-full bg-[#C8A96E]/10 border border-[#C8A96E]/20">
           TRUSTED BY
         </span>
 
         {/* Main Heading */}
-        <h2 className="text-2xl sm:text-4xl font-bold text-gray-900 font-serif-heading max-w-4xl mx-auto leading-tight">
-          We've Helped <span className="text-[#C8A96E]">200+ Businesses</span> Look Like The Best Brand In Their Industry
+        <h2 className="text-2xl sm:text-4xl font-bold text-white font-serif-heading max-w-4xl mx-auto leading-tight">
+          We've Helped <span className="gold-gradient-text">200+ Businesses</span> Look Like The Best Brand In Their Industry
         </h2>
 
         {/* Subtitle */}
-        <p className="mt-3 text-sm sm:text-base text-red-400 font-medium max-w-2xl mx-auto">
+        <p className="mt-3 text-sm sm:text-base text-gray-300 font-medium max-w-2xl mx-auto">
           From funded startups to established companies — brands that chose to look the part.
         </p>
 
-        {/* Marquee Track with 15 Official Client Logos & Thin Vertical Dividers */}
-        <div className="mt-12 relative w-full flex overflow-x-hidden border-t border-b border-gray-200 py-6">
-          {/* Fading side edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#F9F7F3] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#F9F7F3] to-transparent z-10 pointer-events-none"></div>
+        {/* Marquee Track Matching Dark Theme */}
+        <div className="mt-12 relative w-full flex overflow-x-hidden border-t border-b border-white/10 py-6 bg-[#141414]/60 rounded-xl">
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#0D0D0D] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#0D0D0D] to-transparent z-10 pointer-events-none"></div>
 
           <div className="animate-marquee flex items-center gap-0">
             {[...clientLogos, ...clientLogos].map((brand, idx) => (
               <div 
                 key={idx}
-                className="px-8 py-2 flex items-center justify-center min-w-[180px] sm:min-w-[220px] h-16 border-r border-gray-300 flex-shrink-0"
+                className="px-8 py-2 flex items-center justify-center min-w-[180px] sm:min-w-[220px] h-16 border-r border-white/10 flex-shrink-0"
               >
                 <img 
                   src={brand.src} 
                   alt={brand.alt} 
-                  className="max-h-12 w-auto object-contain transition-opacity duration-300 opacity-90 hover:opacity-100"
+                  className="max-h-12 w-auto object-contain transition-all duration-300 brightness-0 invert opacity-75 hover:opacity-100"
                 />
               </div>
             ))}
