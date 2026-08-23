@@ -4,7 +4,6 @@ import HomePage from './pages/HomePage';
 import PortfolioPage from './pages/PortfolioPage';
 import PackagesPage from './pages/PackagesPage';
 import PortfolioDetailPage from './pages/PortfolioDetailPage';
-import FloatingContact from './components/FloatingContact';
 
 // Scroll helper to handle hash navigation or top scrolling
 const ScrollToTop = () => {
@@ -38,7 +37,6 @@ const App = () => {
         <Route path="/packages" element={<PackagesPage />} />
         <Route path="*" element={<HomePage />} />
       </Routes>
-      <FloatingContact />
     </BrowserRouter>
   );
 };
