@@ -1,14 +1,119 @@
 export const portfolioItems = [
   {
+    id: "courtz",
+    title: "COUTRIZ Clothing",
+    slogan: "premium clothing brand",
+    category: "Branding",
+    tag: "Full Identity & Apparel",
+    coverImage: "/portfolio/courtz/Artboard 1 copy 13@4x-20.webp",
+    client: "COUTRIZ Clothing",
+    year: "2026",
+    colorPalette: ["#0D0D0D", "#C8A96E", "#E5C383", "#FFFFFF"],
+    problem: "Coutriz had a clothing brand with potential, but its visual identity didn’t feel strong or consistent enough to build a memorable brand.",
+    fix: "We created a complete brand identity, including the logo, stationery, and supporting brand elements, giving Coutriz a clear and consistent look.",
+    result: "A stronger, more polished brand that looks professional and is easier for customers to recognize and remember.",
+    deliverables: [
+      "logo",
+      "brand guidelines",
+      "social media assests",
+      "stationery"
+    ],
+    description: "Coutriz had a clothing brand with potential, but its visual identity didn’t feel strong or consistent enough to build a memorable brand. We created a complete brand identity, including the logo, stationery, and supporting brand elements, giving Coutriz a clear and consistent look. A stronger, more polished brand that looks professional and is easier for customers to recognize and remember.",
+    images: [
+      "/portfolio/courtz/Artboard 1 copy 13@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 14@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 15@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 16@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 17@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 17_1@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 18@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 19@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 20@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 21@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 22@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 24@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 27@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 28@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 29@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 31@4x-20.webp",
+      "/portfolio/courtz/Artboard 1 copy 35@4x-20.webp"
+    ]
+  },
+  {
+    id: "ecovista",
+    title: "ECOVISTA TRAVEL",
+    slogan: "Logo · Stationery · Travel Brand Identity",
+    category: "Branding",
+    tag: "Logo & Stationery",
+    coverImage: "/portfolio/ecovista/Artboard 26@4x-20.webp",
+    client: "ECOVISTA TRAVEL",
+    year: "2026",
+    colorPalette: ["#0D0D0D", "#C8A96E", "#E5C383", "#FFFFFF"],
+    problem: "EcoVista Travel needed to look more professional and trustworthy to stand out in a competitive travel market.",
+    fix: "We created a distinctive logo and basic stationery that gave the brand a clean, professional identity.",
+    result: "A more credible and memorable brand presence that makes a stronger first impression on potential travelers.",
+    deliverables: [
+      "logo",
+      "stationery"
+    ],
+    description: "EcoVista Travel needed to look more professional and trustworthy to stand out in a competitive travel market. We created a distinctive logo and basic stationery that gave the brand a clean, professional identity. The result is a more credible and memorable brand presence that makes a stronger first impression on potential travelers.",
+    images: [
+      "/portfolio/ecovista/Artboard 26@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_1@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_2@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_3@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_4@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_5@4x-20.webp",
+      "/portfolio/ecovista/Artboard 26_6@4x-20.webp"
+    ]
+  },
+  {
+    id: "vision-focus",
+    title: "VISION FOCUS",
+    slogan: "Hospitality Consultancy Brand Identity",
+    category: "Branding",
+    tag: "Hospitality Identity",
+    coverImage: "/portfolio/vision-focus/Artboard 1@4x-20.webp",
+    client: "VISION FOCUS",
+    year: "2026",
+    colorPalette: ["#0D0D0D", "#C8A96E", "#E5C383", "#FFFFFF"],
+    problem: "Vision Focus struggled to present itself as a credible hospitality consultancy and stand out from competitors.",
+    fix: "We created a professional, refined brand identity that reflects expertise, trust, and the premium hospitality industry.",
+    result: "A stronger and more credible brand presence that builds confidence with potential clients.",
+    deliverables: [
+      "logo",
+      "company profile",
+      "stationery",
+      "colors and typography"
+    ],
+    description: "Vision Focus struggled to present itself as a credible hospitality consultancy and stand out from competitors. We created a professional, refined brand identity that reflects expertise, trust, and the premium hospitality industry. The result is a stronger and more credible brand presence that builds confidence with potential clients.",
+    images: [
+      "/portfolio/vision-focus/Artboard 1@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 3_1@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 4@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 5@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 5_1@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 6_1@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 8@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 9@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 10@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 11@4x-20.webp",
+      "/portfolio/vision-focus/Artboard 1 copy 12@4x-20.webp"
+    ]
+  },
+  {
     id: "teerag",
-    title: "TEERAG",
-    slogan: "Premium Apparel & Luxury Brand System",
+    title: "TEERAG Civil Construction",
+    slogan: "Civil Construction & Infrastructure Brand Identity",
     category: "Branding",
     tag: "Full Identity & Packaging",
-    coverImage: "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.png",
-    client: "Teerag Clothing Co.",
+    coverImage: "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.webp",
+    client: "Teerag Civil Construction",
     year: "2026",
     colorPalette: ["#141414", "#C8A96E", "#E5C383", "#FFFFFF"],
+    problem: "Teerag struggled to build trust with potential clients in Dubai. Their brand didn’t look established enough to compete for serious projects.",
+    fix: "We gave Teerag a professional, credible brand identity built to match the Dubai market.",
+    result: "A stronger brand presence that helps Teerag look established, build trust, and compete confidently.",
     deliverables: [
       "Brand Strategy & Positioning",
       "Custom Typographic Logo Mark",
@@ -17,15 +122,18 @@ export const portfolioItems = [
       "Social Media Branding Kit",
       "Brand Style Guidelines PDF"
     ],
-    description: "TEERAG is a modern lifestyle and apparel brand requiring an elegant, memorable visual identity. We crafted a distinctive typographic logo mark paired with luxury packaging assets and high-converting visual collateral.",
+    description: "Teerag struggled to build trust with potential clients in Dubai. Their brand didn’t look established enough to compete for serious projects. We gave Teerag a professional, credible brand identity built to match the Dubai market. The result is a stronger brand presence that helps Teerag look established, build trust, and compete confidently.",
     images: [
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_27_46 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_31_54 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_32_05 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_55_10 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_02_08 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_03_20 PM.png"
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_27_46 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_31_54 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_32_05 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_55_10 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_02_08 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_03_20 PM.webp",
+      "/portfolio/Teerag/Jul 20, 2026, 02_31_21 PM.webp",
+      "/portfolio/Teerag/teerag (1)-04.webp",
+      "/portfolio/Teerag/teerag (1)-10.webp"
     ]
   },
   {
@@ -34,10 +142,13 @@ export const portfolioItems = [
     slogan: "Turning a Web Agency Into a Brand People Trust",
     category: "Logo Design",
     tag: "Iconic Tech Mark",
-    coverImage: "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_00_52 PM.png",
+    coverImage: "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_00_52 PM.webp",
     client: "104 Digital Solutions",
     year: "2026",
     colorPalette: ["#0D0D0D", "#00E5FF", "#C8A96E", "#F9F7F3"],
+    problem: "104 Digital needed a brand that could look credible on an international level and compete with established digital agencies.",
+    fix: "We developed a modern, professional visual identity designed to communicate expertise, creativity, and global capability.",
+    result: "A stronger international presence that makes 104 Digital look more credible, professional, and ready for bigger opportunities.",
     deliverables: [
       "Custom Geometric Logo Mark",
       "3D Rendered Mockups",
@@ -45,13 +156,13 @@ export const portfolioItems = [
       "Corporate Stationery Package",
       "Digital Pitch Presentation Deck"
     ],
-    description: "104 DIGITAL needed a sharp, futuristic geometric logo representing digital growth and technology. We developed a versatile mark scalable across digital products, billboards, and mobile interfaces.",
+    description: "104 Digital needed a brand that could look credible on an international level and compete with established digital agencies. We developed a modern, professional visual identity designed to communicate expertise, creativity, and global capability. The result is a stronger international presence that makes 104 Digital look more credible, professional, and ready for bigger opportunities.",
     images: [
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_00_52 PM.png",
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_16 PM.png",
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_26 PM.png",
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_47 PM.png",
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_06_40 PM.png"
+      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_00_52 PM.webp",
+      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_16 PM.webp",
+      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_26 PM.webp",
+      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_47 PM.webp",
+      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_06_40 PM.webp"
     ]
   },
   {
@@ -60,10 +171,13 @@ export const portfolioItems = [
     slogan: "Digital Marketing, Built to Stand Out.",
     category: "Web Design",
     tag: "Brand Identity & UI/UX",
-    coverImage: "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.png",
+    coverImage: "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.webp",
     client: "Boostix Media Group",
     year: "2026",
     colorPalette: ["#0B0E14", "#7C3AED", "#C8A96E", "#FFFFFF"],
+    problem: "Boostix Digital had the expertise, but its brand didn’t communicate the same level of confidence and quality to potential clients.",
+    fix: "We created a bold, modern brand identity that positions Boostix as a serious digital marketing agency.",
+    result: "A stronger, more confident brand presence built to attract attention and win client trust.",
     deliverables: [
       "Dynamic Logo Suite",
       "Dark & Light Mode Variants",
@@ -71,64 +185,13 @@ export const portfolioItems = [
       "Brand Guidelines Manual",
       "Marketing Collateral"
     ],
-    description: "BOOSTIX DIGITAL represents energetic growth and digital performance. The brand system blends gradient neon accents with precision typography to position Boostix as an industry leader.",
+    description: "Boostix Digital had the expertise, but its brand didn’t communicate the same level of confidence and quality to potential clients. We created a bold, modern brand identity that positions Boostix as a serious digital marketing agency. The result is a stronger, more confident brand presence built to attract attention and win client trust.",
     images: [
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.png",
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_19 PM.png",
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.png",
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_56_56 PM.png",
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_57_43 PM.png"
-    ]
-  },
-  {
-    id: "apex-financial",
-    title: "Apex Financial",
-    slogan: "Logo · Brand Identity · FinTech",
-    category: "Branding",
-    tag: "FinTech Identity",
-    coverImage: "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_16 PM.png",
-    client: "Apex Financial Corp",
-    year: "2026",
-    colorPalette: ["#0D0D0D", "#C8A96E", "#FFFFFF"],
-    deliverables: ["Logo Design", "Brand Guidelines", "Stationery Kit"],
-    description: "Apex Financial is a modern FinTech organization requiring a trustworthy, sophisticated brand identity.",
-    images: [
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_16 PM.png",
-      "/portfolio/104/ChatGPT Image Jul 20, 2026, 02_01_26 PM.png"
-    ]
-  },
-  {
-    id: "grove-organics",
-    title: "Grove Organics",
-    slogan: "Logo · Packaging · Brand System",
-    category: "Branding",
-    tag: "Eco Packaging",
-    coverImage: "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_27_46 PM.png",
-    client: "Grove Organics Ltd",
-    year: "2026",
-    colorPalette: ["#141414", "#A68547", "#FFFFFF"],
-    deliverables: ["Organic Packaging", "Eco Brand Identity", "Label Suite"],
-    description: "Grove Organics is an eco-friendly brand identity crafted with sustainable luxury aesthetics.",
-    images: [
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_27_46 PM.png",
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_31_54 PM.png"
-    ]
-  },
-  {
-    id: "luxe-interiors",
-    title: "Luxe Interiors",
-    slogan: "Full Brand Identity · Luxury",
-    category: "Logo Design",
-    tag: "Luxury Interiors",
-    coverImage: "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_19 PM.png",
-    client: "Luxe Interiors Studio",
-    year: "2026",
-    colorPalette: ["#0B0E14", "#C8A96E", "#FFFFFF"],
-    deliverables: ["Luxury Logo Mark", "Stationery", "Brand Book"],
-    description: "Luxe Interiors represents ultra-high-end architecture and interior design.",
-    images: [
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_19 PM.png",
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.png"
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_19 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_56_56 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_57_43 PM.webp"
     ]
   }
 ];

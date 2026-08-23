@@ -127,6 +127,7 @@ const PortfolioDetailPage = () => {
           <img
             src={galleryImages[activeImgIndex]}
             alt={`${item.title} View ${activeImgIndex + 1}`}
+            decoding="async"
             className="w-full h-auto max-h-[750px] object-contain mx-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300"
           />
 
@@ -167,7 +168,7 @@ const PortfolioDetailPage = () => {
                     activeImgIndex === idx ? 'border-[#C8A96E] scale-105 shadow-lg shadow-[#C8A96E]/20' : 'border-white/10 opacity-70 hover:opacity-100'
                   }`}
                 >
-                  <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover rounded-lg" />
+                  <img src={img} alt={`Gallery ${idx}`} loading="lazy" decoding="async" className="w-full h-full object-cover rounded-lg" />
                 </button>
               ))}
             </div>
@@ -176,19 +177,50 @@ const PortfolioDetailPage = () => {
 
         {/* Case Study Overview Breakdown (Full Width) */}
         <div className="pt-8 border-t border-white/10 max-w-5xl mx-auto space-y-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white font-serif-heading mb-4">
-              Brand Strategy & Execution Overview
-            </h3>
-            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-              {item.description}
-            </p>
-          </div>
+          {item.problem ? (
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-bold text-white font-serif-heading mb-2">
+                  The Problem
+                </h3>
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                  {item.problem}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-white font-serif-heading mb-2">
+                  How We Fixed It
+                </h3>
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                  {item.fix}
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-bold text-white font-serif-heading mb-2">
+                  The Result
+                </h3>
+                <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                  {item.result}
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <h3 className="text-2xl font-bold text-white font-serif-heading mb-4">
+                Brand Strategy & Execution Overview
+              </h3>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+                {item.description}
+              </p>
+            </div>
+          )}
 
           {/* Deliverables Grid */}
           <div className="bg-[#141414] p-8 rounded-2xl border border-white/5 space-y-4">
-            <h4 className="text-xl font-bold text-white font-serif-heading">
-              Included Deliverables & Master Files
+            <h4 className="text-xl font-bold text-white font-serif-heading capitalize">
+              deliverable
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {item.deliverables?.map((deliv, i) => (
