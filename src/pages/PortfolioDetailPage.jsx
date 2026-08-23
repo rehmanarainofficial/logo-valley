@@ -116,18 +116,18 @@ const PortfolioDetailPage = () => {
           </div>
         </div>
 
-        {/* Main Display Image Slider with Next/Prev & Touch Swipe */}
+        {/* Main Display Image Slider (Seamless Dynamic Aspect Ratio View) */}
         <div 
-          className="relative rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-2 sm:p-3 shadow-2xl overflow-hidden h-[340px] sm:h-[480px] md:h-[580px] w-full flex items-center justify-center group touch-pan-y"
+          className="relative w-full rounded-2xl overflow-hidden flex items-center justify-center group touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Main Image - Fitted to Box */}
+          {/* Main Image - Natural Aspect Ratio */}
           <img
             src={galleryImages[activeImgIndex]}
             alt={`${item.title} View ${activeImgIndex + 1}`}
-            className="w-full h-full object-cover rounded-xl shadow-lg transition-all duration-300"
+            className="w-full h-auto max-h-[750px] object-contain mx-auto rounded-2xl shadow-2xl border border-white/10 transition-all duration-300"
           />
 
           {/* Floating Next / Prev Buttons */}
