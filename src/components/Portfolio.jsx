@@ -1,4 +1,3 @@
-import React from "react";
 import { portfolioItems } from "../data/portfolioData";
 import { Eye, Sparkles, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
@@ -61,7 +60,7 @@ const Portfolio = ({ isStandalonePage = false }) => {
 
                   {/* Tag Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="px-3 py-1 rounded-md bg-[#0D0D0D]/80 backdrop-blur-md border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold">
+                    <span className="px-3 py-1 rounded-md bg-[#0D0D0D]/80 backdrop-blur-md border capitalize border-[#C8A96E]/30 text-[#C8A96E] text-xs font-semibold">
                       {item.tag}
                     </span>
                   </div>
@@ -70,10 +69,10 @@ const Portfolio = ({ isStandalonePage = false }) => {
                 {/* Card Meta Content - Name & Slogan Only */}
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-[#C8A96E] transition-colors font-serif-heading">
+                    <h3 className="text-xl uppercase font-bold text-white group-hover:text-[#C8A96E] transition-colors font-serif-heading">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm text-[#C8A96E] font-medium">
+                    <p className="mt-2 text-sm text-[#C8A96E] font-medium capitalize">
                       {item.slogan || item.tag}
                     </p>
                   </div>

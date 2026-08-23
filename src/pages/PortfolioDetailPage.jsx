@@ -96,11 +96,11 @@ const PortfolioDetailPage = () => {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold tracking-wide mb-2">
                 <Tag className="w-3.5 h-3.5" /> {item.category} Case Study
               </div>
-              <h1 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
+              <h1 className="text-3xl uppercase sm:text-5xl font-bold text-white font-serif-heading">
                 {item.title}
               </h1>
               {item.slogan && (
-                <p className="mt-2 text-sm sm:text-base text-[#C8A96E] font-medium">
+                <p className="mt-2 text-sm sm:text-base text-[#C8A96E] font-medium capitalize">
                   {item.slogan}
                 </p>
               )}
@@ -224,7 +224,7 @@ const PortfolioDetailPage = () => {
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {item.deliverables?.map((deliv, i) => (
-                <div key={i} className="flex items-center gap-3 text-sm text-gray-200">
+                <div key={i} className="flex capitalize items-center gap-3 text-sm text-gray-200">
                   <CheckCircle className="w-5 h-5 text-[#C8A96E] flex-shrink-0" />
                   <span>{deliv}</span>
                 </div>
