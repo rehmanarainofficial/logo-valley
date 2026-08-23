@@ -118,16 +118,16 @@ const PortfolioDetailPage = () => {
 
         {/* Main Display Image Slider with Next/Prev & Touch Swipe */}
         <div 
-          className="relative rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[420px] flex items-center justify-center group touch-pan-y"
+          className="relative rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-2 sm:p-3 shadow-2xl overflow-hidden h-[340px] sm:h-[480px] md:h-[580px] w-full flex items-center justify-center group touch-pan-y"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          {/* Main Image */}
+          {/* Main Image - Fitted to Box */}
           <img
             src={galleryImages[activeImgIndex]}
             alt={`${item.title} View ${activeImgIndex + 1}`}
-            className="max-h-[620px] w-auto object-contain rounded-xl shadow-lg transition-all duration-300"
+            className="w-full h-full object-cover rounded-xl shadow-lg transition-all duration-300"
           />
 
           {/* Floating Next / Prev Buttons */}
@@ -148,11 +148,6 @@ const PortfolioDetailPage = () => {
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
-
-              {/* Image Counter Badge */}
-              <div className="absolute bottom-6 right-6 px-3.5 py-1.5 rounded-full bg-[#0D0D0D]/90 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-bold tracking-wider backdrop-blur-md">
-                {activeImgIndex + 1} / {totalImages}
-              </div>
             </>
           )}
         </div>
