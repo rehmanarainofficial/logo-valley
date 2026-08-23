@@ -29,7 +29,15 @@ const Footer = () => {
               className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
             >
               <Mail className="w-5 h-5 text-[#C8A96E]" />
-              <span>hello@logovalley.com</span>
+              <span>contact@logo-valley.com</span>
+            </a>
+
+             <a 
+              href="mailto:support@logo-valley.com" 
+              className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
+            >
+              <Mail className="w-5 h-5 text-[#C8A96E]" />
+              <span>saim@logo-valley.com</span>
             </a>
 
             <a 
