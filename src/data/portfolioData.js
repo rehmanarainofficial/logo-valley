@@ -6,7 +6,7 @@ export const portfolioItems = [
     category: "Branding",
     tag: "Full Identity",
     coverImage:
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_03_20 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.webp",
     client: "Teerag Civil Construction",
     year: "2026",
     colorPalette: ["#141414", "#C8A96E", "#E5C383", "#FFFFFF"],
@@ -26,8 +26,8 @@ export const portfolioItems = [
     description:
       "Teerag struggled to build trust with potential clients in Dubai. Their brand didn’t look established enough to compete for serious projects. We gave Teerag a professional, credible brand identity built to match the Dubai market. The result is a stronger brand presence that helps Teerag look established, build trust, and compete confidently.",
     images: [
-      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_03_20 PM.webp",
       "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_23_15 PM.webp",
+      "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 03_03_20 PM.webp",
       "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_27_46 PM.webp",
       "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_31_54 PM.webp",
       "/portfolio/Teerag/ChatGPT Image Jul 20, 2026, 02_32_05 PM.webp",
@@ -77,7 +77,7 @@ export const portfolioItems = [
     category: "Web Design",
     tag: "Brand Identity",
     coverImage:
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.webp",
     client: "Boostix Media Group",
     year: "2026",
     colorPalette: ["#0B0E14", "#7C3AED", "#C8A96E", "#FFFFFF"],
@@ -96,8 +96,8 @@ export const portfolioItems = [
     description:
       "Boostix Digital had the expertise, but its brand didn’t communicate the same level of confidence and quality to potential clients. We created a bold, modern brand identity that positions Boostix as a serious digital marketing agency. The result is a stronger, more confident brand presence built to attract attention and win client trust.",
     images: [
-      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.webp",
       "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_51_42 PM.webp",
+      "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_40 PM.webp",
       "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_53_19 PM.webp",
       "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_56_56 PM.webp",
       "/portfolio/boostix/ChatGPT Image Jul 20, 2026, 01_57_43 PM.webp",
