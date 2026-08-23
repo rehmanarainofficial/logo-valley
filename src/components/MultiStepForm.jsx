@@ -73,7 +73,7 @@ const MultiStepForm = ({ selectedPackage }) => {
       `*Full Name:* ${formData.name}\n` +
       `*Contact Number:* ${formData.phone}`;
 
-    const targetWhatsAppUrl = `https://wa.me/923212805070?text=${encodeURIComponent(message)}`;
+    const targetWhatsAppUrl = `https://wa.me/447426703249?text=${encodeURIComponent(message)}`;
 
     // Redirect to WhatsApp
     window.open(targetWhatsAppUrl, "_blank", "noopener,noreferrer");
@@ -337,7 +337,7 @@ const MultiStepForm = ({ selectedPackage }) => {
                   Your project brief has been formatted and opened in WhatsApp!
                   Our creative team at{" "}
                   <span className="text-[#C8A96E] font-semibold">
-                    +92 321 2805070
+                    +44 7426 703249
                   </span>{" "}
                   will respond to your message shortly.
                 </p>
