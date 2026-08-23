@@ -22,6 +22,7 @@ const PortfolioPage = () => {
       <Navbar onOpenQuoteModal={handleOpenForm} />
 
       <main>
+        <h1 className="sr-only">Logo Design & Brand Identity Showcase Portfolio - Logo Valley Studio</h1>
         <Portfolio onOpenForm={handleOpenForm} isStandalonePage={true} />
         <MultiStepForm selectedPackage={selectedPkg} />
       </main>

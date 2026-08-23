@@ -49,6 +49,7 @@ const PackagesPage = () => {
       <Navbar onOpenQuoteModal={handleOpenForm} />
 
       <main>
+        <h1 className="sr-only">Logo & Branding Packages & Pricing - Logo Valley Studio</h1>
         <Packages onSelectPackage={handleSelectPackage} />
 
         {/* FAQ Accordion Section */}
