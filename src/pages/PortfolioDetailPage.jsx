@@ -1,21 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { portfolioItems } from '../data/portfolioData';
 import Navbar from '../components/Navbar';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { ArrowLeft, CheckCircle, Calendar, User, Tag, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Calendar, User, Tag, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
 
   const item = portfolioItems.find((p) => p.id === id) || portfolioItems[0];
-  const [activeImage, setActiveImage] = useState(item.coverImage);
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
+
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   useEffect(() => {
     if (item) {
-      setActiveImage(item.coverImage);
+      setActiveImgIndex(0);
       window.scrollTo(0, 0);
     }
   }, [id, item]);
@@ -30,6 +33,38 @@ const PortfolioDetailPage = () => {
       </div>
     );
   }
+
+  const galleryImages = item.images && item.images.length > 0 ? item.images : [item.coverImage];
+  const totalImages = galleryImages.length;
+
+  const handleNextImage = () => {
+    setActiveImgIndex((prev) => (prev + 1) % totalImages);
+  };
+
+  const handlePrevImage = () => {
+    setActiveImgIndex((prev) => (prev - 1 + totalImages) % totalImages);
+  };
+
+  // Mobile Touch Swipe Handlers for Image Slider
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    if (distance > 40) {
+      handleNextImage();
+    } else if (distance < -40) {
+      handlePrevImage();
+    }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
 
   const handleOpenForm = () => {
     const el = document.getElementById('contact');
@@ -64,6 +99,11 @@ const PortfolioDetailPage = () => {
               <h1 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading">
                 {item.title}
               </h1>
+              {item.slogan && (
+                <p className="mt-2 text-sm sm:text-base text-[#C8A96E] font-medium">
+                  {item.slogan}
+                </p>
+              )}
             </div>
 
             <button
@@ -76,28 +116,60 @@ const PortfolioDetailPage = () => {
           </div>
         </div>
 
-        {/* Main Display Image */}
-        <div className="rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-4 shadow-2xl overflow-hidden min-h-[400px] flex items-center justify-center">
+        {/* Main Display Image Slider with Next/Prev & Touch Swipe */}
+        <div 
+          className="relative rounded-2xl border border-[#C8A96E]/20 bg-[#141414] p-4 sm:p-6 shadow-2xl overflow-hidden min-h-[420px] flex items-center justify-center group touch-pan-y"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Main Image */}
           <img
-            src={activeImage}
-            alt={item.title}
-            className="max-h-[600px] w-auto object-contain rounded-xl shadow-lg transition-all duration-300"
+            src={galleryImages[activeImgIndex]}
+            alt={`${item.title} View ${activeImgIndex + 1}`}
+            className="max-h-[620px] w-auto object-contain rounded-xl shadow-lg transition-all duration-300"
           />
+
+          {/* Floating Next / Prev Buttons */}
+          {totalImages > 1 && (
+            <>
+              <button
+                onClick={handlePrevImage}
+                className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-[#0D0D0D]/80 border border-white/20 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-black transition-all cursor-pointer shadow-lg backdrop-blur-md"
+                title="Previous Image"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+
+              <button
+                onClick={handleNextImage}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-[#0D0D0D]/80 border border-white/20 text-[#C8A96E] hover:bg-[#C8A96E] hover:text-black transition-all cursor-pointer shadow-lg backdrop-blur-md"
+                title="Next Image"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+
+              {/* Image Counter Badge */}
+              <div className="absolute bottom-6 right-6 px-3.5 py-1.5 rounded-full bg-[#0D0D0D]/90 border border-[#C8A96E]/30 text-[#C8A96E] text-xs font-bold tracking-wider backdrop-blur-md">
+                {activeImgIndex + 1} / {totalImages}
+              </div>
+            </>
+          )}
         </div>
 
         {/* Thumbnail Selector Grid */}
-        {item.images && item.images.length > 1 && (
+        {totalImages > 1 && (
           <div>
             <h3 className="text-sm font-semibold text-gray-400 tracking-wide mb-4">
-              Project Asset Gallery ({item.images.length} High-Res Views)
+              Project Asset Gallery ({totalImages} High-Res Views)
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-4">
-              {item.images.map((img, idx) => (
+              {galleryImages.map((img, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setActiveImage(img)}
+                  onClick={() => setActiveImgIndex(idx)}
                   className={`relative rounded-xl overflow-hidden border-2 transition-all p-1.5 bg-[#141414] h-24 flex items-center justify-center cursor-pointer ${
-                    activeImage === img ? 'border-[#C8A96E] scale-105 shadow-lg shadow-[#C8A96E]/20' : 'border-white/10 opacity-70 hover:opacity-100'
+                    activeImgIndex === idx ? 'border-[#C8A96E] scale-105 shadow-lg shadow-[#C8A96E]/20' : 'border-white/10 opacity-70 hover:opacity-100'
                   }`}
                 >
                   <img src={img} alt={`Gallery ${idx}`} className="w-full h-full object-cover rounded-lg" />

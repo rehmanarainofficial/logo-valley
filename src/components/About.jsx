@@ -23,7 +23,7 @@ const About = () => {
               
               <h2 className="text-3xl sm:text-5xl font-bold text-white font-serif-heading leading-tight">
                 Hello! We are <br />
-                <span className="gold-gradient-text">Marketing Exclusive</span>
+                <span className="gold-gradient-text">Logo Valley</span>
               </h2>
 
               <p className="mt-4 text-[#C8A96E] text-lg sm:text-xl font-semibold leading-snug">

@@ -32,15 +32,15 @@ const Footer = () => {
               className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
             >
               <Mail className="w-4 h-4 text-[#C8A96E]" />
-              <span>support@logo-valley.com</span>
+              <span>hello@logovalley.com</span>
             </a>
 
             <a 
-              href="tel:+18005555646" 
+              href="tel:+15550247890" 
               className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
             >
               <Phone className="w-4 h-4 text-[#C8A96E]" />
-              <span>+1 (800) 555-LOGO</span>
+              <span>+1 (555) 024-7890</span>
             </a>
           </div>
 
