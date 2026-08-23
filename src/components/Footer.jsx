@@ -26,21 +26,21 @@ const Footer = () => {
           </Link>
 
           {/* Contact Info (Email & Phone ONLY) */}
-          <div className="flex flex-col sm:flex-row items-center gap-6 text-xs text-gray-300">
+          <div className="flex flex-col sm:flex-row items-center gap-6 text-sm text-gray-300">
             <a 
               href="mailto:support@logo-valley.com" 
               className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
             >
-              <Mail className="w-4 h-4 text-[#C8A96E]" />
+              <Mail className="w-5 h-5 text-[#C8A96E]" />
               <span>hello@logovalley.com</span>
             </a>
 
             <a 
-              href="tel:+15550247890" 
+              href="tel:+447426703249" 
               className="flex items-center gap-2 hover:text-[#C8A96E] transition-colors"
             >
-              <Phone className="w-4 h-4 text-[#C8A96E]" />
-              <span>+1 (555) 024-7890</span>
+              <Phone className="w-5 h-5 text-[#C8A96E]" />
+              <span>+44 7426 703249</span>
             </a>
           </div>
 

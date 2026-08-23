@@ -1,23 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { portfolioItems } from "../data/portfolioData";
 import { Eye, Sparkles, ArrowRight } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
-const categories = ["All", "Logo Design", "Branding", "Web Design"];
-
 const Portfolio = ({ isStandalonePage = false }) => {
-  const [activeCategory, setActiveCategory] = useState("All");
   const navigate = useNavigate();
 
-  const filteredItems =
-    activeCategory === "All"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeCategory);
-
   const displayItems = isStandalonePage
-    ? filteredItems
-    : filteredItems.slice(0, 3);
+    ? portfolioItems
+    : portfolioItems.slice(0, 3);
 
   const handleCardClick = (id) => {
     navigate(`/portfolio/${id}`);
@@ -36,28 +28,9 @@ const Portfolio = ({ isStandalonePage = false }) => {
               Work <span className="gold-gradient-text">We're Proud Of</span>
             </h2>
             <p className="mt-4 text-gray-300 text-base sm:text-lg">
-              500+ logos and brand identities across every industry. A selection
+              100+ logos and brand identities across every industry. A selection
               of our recent work.
             </p>
-          </div>
-        </ScrollReveal>
-
-        {/* Category Filter Tabs */}
-        <ScrollReveal animation="fade-up" delay={150}>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 cursor-pointer ${
-                  activeCategory === cat
-                    ? "gold-gradient-bg text-black shadow-lg shadow-[#C8A96E]/20 scale-105"
-                    : "bg-[#141414] text-gray-400 border border-white/10 hover:text-white hover:border-[#C8A96E]/40"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
           </div>
         </ScrollReveal>
 

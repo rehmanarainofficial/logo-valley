@@ -5,7 +5,7 @@ import Navbar from '../components/Navbar';
 import MultiStepForm from '../components/MultiStepForm';
 import Footer from '../components/Footer';
 import SEO from '../components/SEO';
-import { ArrowLeft, CheckCircle, Calendar, User, Tag, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Tag, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const PortfolioDetailPage = () => {
   const { id } = useParams();
@@ -179,94 +179,31 @@ const PortfolioDetailPage = () => {
           </div>
         )}
 
-        {/* Meta Info & Overview Breakdown */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-8 border-t border-white/10">
-          
-          {/* Left Metadata Column */}
-          <div className="space-y-6 bg-[#141414] p-8 rounded-2xl border border-white/5">
-            <h3 className="text-xl font-bold text-white font-serif-heading border-b border-white/10 pb-3">
-              Project Specification
+        {/* Case Study Overview Breakdown (Full Width) */}
+        <div className="pt-8 border-t border-white/10 max-w-5xl mx-auto space-y-8">
+          <div>
+            <h3 className="text-2xl font-bold text-white font-serif-heading mb-4">
+              Brand Strategy & Execution Overview
             </h3>
+            <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+              {item.description}
+            </p>
+          </div>
 
-            <div>
-              <span className="text-xs text-gray-400 tracking-wide block">Client Organization</span>
-              <span className="text-base font-semibold text-white flex items-center gap-2 mt-1">
-                <User className="w-4 h-4 text-[#C8A96E]" /> {item.client}
-              </span>
-            </div>
-
-            <div>
-              <span className="text-xs text-gray-400 tracking-wide block">Year Delivered</span>
-              <span className="text-base font-semibold text-white flex items-center gap-2 mt-1">
-                <Calendar className="w-4 h-4 text-[#C8A96E]" /> {item.year}
-              </span>
-            </div>
-
-            <div>
-              <span className="text-xs text-gray-400 tracking-wide block">Scope Tag</span>
-              <span className="inline-block px-3 py-1 rounded-md bg-[#C8A96E]/10 text-[#C8A96E] text-xs font-semibold mt-1">
-                {item.tag}
-              </span>
-            </div>
-
-            {/* Brand Color Swatches */}
-            {item.colorPalette && (
-              <div>
-                <span className="text-xs text-gray-400 tracking-wide block mb-2">Brand Palette Tokens</span>
-                <div className="flex items-center gap-2">
-                  {item.colorPalette.map((color, i) => (
-                    <div key={i} className="flex flex-col items-center gap-1">
-                      <div 
-                        className="w-8 h-8 rounded-full border border-white/20 shadow-md"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                      <span className="text-[10px] text-gray-400 font-mono">{color}</span>
-                    </div>
-                  ))}
+          {/* Deliverables Grid */}
+          <div className="bg-[#141414] p-8 rounded-2xl border border-white/5 space-y-4">
+            <h4 className="text-xl font-bold text-white font-serif-heading">
+              Included Deliverables & Master Files
+            </h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              {item.deliverables?.map((deliv, i) => (
+                <div key={i} className="flex items-center gap-3 text-sm text-gray-200">
+                  <CheckCircle className="w-5 h-5 text-[#C8A96E] flex-shrink-0" />
+                  <span>{deliv}</span>
                 </div>
-              </div>
-            )}
+              ))}
+            </div>
           </div>
-
-          {/* Right Case Study Overview */}
-          <div className="lg:col-span-2 space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white font-serif-heading mb-4">
-                Brand Strategy & Execution Overview
-              </h3>
-              <p className="text-gray-300 text-base leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-
-            {/* Deliverables Grid */}
-            <div className="bg-[#141414] p-8 rounded-2xl border border-white/5 space-y-4">
-              <h4 className="text-xl font-bold text-white font-serif-heading">
-                Included Deliverables & Master Files
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                {item.deliverables?.map((deliv, i) => (
-                  <div key={i} className="flex items-center gap-3 text-sm text-gray-200">
-                    <CheckCircle className="w-5 h-5 text-[#C8A96E] flex-shrink-0" />
-                    <span>{deliv}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Quality Guarantee Box */}
-            <div className="p-6 rounded-2xl bg-gradient-to-r from-[#141414] via-[#1E1E1E] to-[#141414] border border-[#C8A96E]/30 flex items-center gap-4">
-              <ShieldCheck className="w-10 h-10 text-[#C8A96E] flex-shrink-0" />
-              <div>
-                <h5 className="font-bold text-white text-base">100% Vector Quality & Legal Rights</h5>
-                <p className="text-xs text-gray-300 mt-0.5">
-                  All logo marks delivered in full master vector formats (AI, EPS, SVG, PDF) with complete trademark copyright transfer.
-                </p>
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
         {/* Navigation */}

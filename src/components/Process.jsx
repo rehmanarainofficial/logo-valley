@@ -52,10 +52,6 @@ const Process = () => {
                   From brief to brand in 7–10 days.
                 </h3>
 
-                <p className="mt-4 text-gray-300 text-sm sm:text-base leading-relaxed">
-                  No guesswork. No generic templates. Every logo and brand identity we build follows a proven process that's delivered results for 500+ companies — from bootstrapped startups to Series B funded teams.
-                </p>
-
                 {/* Average Client Result Callout Box */}
                 <div className="mt-6 inline-flex items-center gap-2.5 px-4 py-3 rounded-xl bg-[#C8A96E]/10 border border-[#C8A96E]/30 text-[#C8A96E] text-xs sm:text-sm font-medium">
                   <Hourglass className="w-4 h-4 text-[#C8A96E] flex-shrink-0" />

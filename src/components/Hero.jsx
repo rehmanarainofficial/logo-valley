@@ -25,9 +25,8 @@ const Hero = ({ onOpenForm }) => {
         <ScrollReveal animation="fade-up" delay={0}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#141414] border border-[#C8A96E]/30 text-[#C8A96E] text-xs sm:text-sm font-medium mb-8 shadow-lg shadow-[#C8A96E]/5">
             <Award className="w-4 h-4 text-[#C8A96E]" />
-            <span>100+ Logos & Brand Identities Built</span>
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C8A96E]"></span>
-            <span className="text-gray-300">$70k+ Revenue Generated</span>
+            <span>Our clients average a 3.2× increase in qualified leads within 15 days of rebranding with us.</span>
+           
           </div>
         </ScrollReveal>
 
@@ -41,11 +40,7 @@ const Hero = ({ onOpenForm }) => {
         {/* Sub Heading 1 (Styled Full-Width Callout Box) & Sub Heading 2 */}
         <ScrollReveal animation="fade-up" delay={300}>
           <div className="mt-8 space-y-4 max-w-4xl lg:max-w-5xl mx-auto w-full">
-            <div className="w-full py-2 rounded-2xl bg-[#141414] border border-[#C8A96E]/30 shadow-xl shadow-[#C8A96E]/5 text-center">
-              <p className="text-sm sm:text-base md:text-lg font-semibold text-[#C8A96E] leading-snug">
-                Our clients average a <span className="underline decoration-[#C8A96E] font-bold">3.2× increase</span> in qualified leads within 15 days of rebranding with us.
-              </p>
-            </div>
+          
             <p className="text-base sm:text-lg text-gray-300 font-normal leading-relaxed max-w-3xl mx-auto">
               From logo to 360 branding presence. We build everything that makes clients trust you and choose you.
             </p>

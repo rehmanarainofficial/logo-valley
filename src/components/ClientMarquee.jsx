@@ -30,7 +30,7 @@ const ClientMarquee = () => {
 
         {/* Main Heading */}
         <h2 className="text-2xl sm:text-4xl font-bold text-white font-serif-heading max-w-4xl mx-auto leading-tight">
-          We've Helped <span className="gold-gradient-text">200+ Businesses</span> Look Like The Best Brand In Their Industry
+          We've Helped <span className="gold-gradient-text">100+ Businesses</span> Look Like The Best Brand In Their Industry
         </h2>
 
         {/* Subtitle */}
@@ -52,7 +52,7 @@ const ClientMarquee = () => {
                 <img 
                   src={brand.src} 
                   alt={brand.alt} 
-                  className="max-h-12 w-auto object-contain transition-all duration-300 brightness-0 invert opacity-75 hover:opacity-100"
+                  className="max-h-20 w-auto object-contain transition-all duration-300 brightness-0 invert opacity-75 hover:opacity-100"
                 />
               </div>
             ))}
